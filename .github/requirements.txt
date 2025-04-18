@@ -1,2 +1,0 @@
-requests==2.25.1
-json==2.0.9  # Optional, only if you use the json library explicitly (it's included in Python's standard library, so you may not need this)
