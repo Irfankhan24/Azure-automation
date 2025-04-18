@@ -12,8 +12,8 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v2
 
-      - name: List files for debugging
-        run: ls -R  # List all files recursively to see if requirements.txt is in the expected path
+      - name: List contents of .github directory (Debugging)
+        run: ls -R .github  # This will list files in the .github directory
 
       - name: Set up Python
         uses: actions/setup-python@v2
@@ -22,7 +22,7 @@ jobs:
 
       - name: Install dependencies
         run: |
-          pip install -r "Azure-automation/.github/requirements.txt"  # Correct path to requirements.txt
+          pip install -r ".github/requirements.txt"  # Correct path to requirements.txt
 
       - name: Run Python script
         run: |
