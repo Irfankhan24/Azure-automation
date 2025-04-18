@@ -2,7 +2,7 @@ name: Python Script action
 
 on:
   schedule:
-    - cron: '*/10 * * * *'  # This cron expression runs every 10 minutes
+    - cron: '*/2 * * * *'  # This cron expression runs every 10 minutes
 
 jobs:
   run_script:
