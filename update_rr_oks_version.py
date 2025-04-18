@@ -6,7 +6,7 @@ QUERY_ID = "5627f7af-2ca2-460e-975f-68dc28041fdd"
 HEADERS = {"Content-Type": "application/json"}
 ORG_NAME = "rapyuta-robotics"
 PROJECT_NAME = "Oks"
-PAT = "6ZQLtnOq"
+PAT = "6ZQLtnOqVIpZUQY9rK5fPOyLmpKMBR4DnZce4YSBF4FiP2v6q5eJJQQJ99BDACAAAAA1kgrNAAASAZDO2b69"
 AUTH = ("", PAT)
 
 UPDATE_HEADERS = {
