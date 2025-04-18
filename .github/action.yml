@@ -1,6 +1,7 @@
 name: Python Script action
 
-on:
+on: 
+  workflow_dispatch:  
   schedule:
     - cron: '*/10 * * * *'  # This cron expression runs every 10 minutes
 
