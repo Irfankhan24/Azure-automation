@@ -1,9 +1,9 @@
 name: Python Scripts Automation
 
 on:
-  workflow_dispatch:  # Manual trigger button
+  workflow_dispatch:
   schedule:
-    - cron: '*/2 * * * *'  # Runs every 2 minutes
+    - cron: '0 0 * * *'  # Run once every day at 00:00 UTC
 
 jobs:
   run-scripts:
@@ -13,7 +13,7 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v2
 
-      - name: List repository contents (for debugging)
+      - name: List repository contents
         run: ls -R
 
       - name: Set up Python 3.9
@@ -27,13 +27,10 @@ jobs:
           pip install -r .github/requirements.txt
 
       - name: Run update_issue_count.py
-        run: |
-          python update_issue_count.py
+        run: python update_issue_count.py
 
       - name: Run update_related_items_list.py
-        run: |
-          python update_related_items_list.py
+        run: python update_related_items_list.py
 
       - name: Run update_rr_oks_version.py
-        run: |
-          python update_rr_oks_version.py
+        run: python update_rr_oks_version.py
