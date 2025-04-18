@@ -26,4 +26,4 @@ jobs:
 
       - name: Run Python script
         run: |
-          python "Azure-automation/update_rr_oks_version.py"
+          python "/update_rr_oks_version.py"
