@@ -19,8 +19,8 @@ jobs:
 
       - name: Install dependencies
         run: |
-          pip install -r "Azure_automation/.github/requirements.txt"  # Correct path to requirements.txt
+          pip install -r "Azure-automation/.github/requirements.txt"  # Correct path to requirements.txt
 
       - name: Run Python script
         run: |
-          python "Azure_automation/update rr_oks_version.py"  # Correct path to your Python script
+          python "Azure-automation/update rr_oks_version.py"  # Correct path to your Python script
