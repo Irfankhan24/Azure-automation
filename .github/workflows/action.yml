@@ -2,7 +2,7 @@ name: Python Script action
 
 on:
   schedule:
-    - cron: '*/2 * * * *'  # This cron expression runs every 10 minutes
+    - cron: '*/2 * * * *'  # This cron expression runs every 2 minutes
 
 jobs:
   run_script:
@@ -11,6 +11,9 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v2
+
+      - name: List files for debugging
+        run: ls -R  # List all files recursively to see if requirements.txt is in the expected path
 
       - name: Set up Python
         uses: actions/setup-python@v2
